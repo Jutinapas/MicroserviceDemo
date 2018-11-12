@@ -22,7 +22,14 @@ public class UserService {
 
     public User create(String name) {
         users.add(new User(name));
-        return users.get(users.size()-1);
+        return users.get(users.size() - 1);
+    }
+
+    public User update(int id, String name) {
+        User u = users.get(id);
+        if (u==null) return null;
+        u.setName(name);
+        return u;
     }
 
     public User delete(int id) {
@@ -34,13 +41,6 @@ public class UserService {
             }
         }
         return user;
-    }
-
-    public User update(int id, String name) {
-        User u = users.get(id);
-        if (u==null) return null;
-        u.setName(name);
-        return u;
     }
 
     public ArrayList<User> getUsers() {

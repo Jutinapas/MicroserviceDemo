@@ -31,4 +31,5 @@ public class User implements Serializable {
     public String toString() {
         return String.format("User#%d[%s]", this.id, this.name);
     }
+
 }
