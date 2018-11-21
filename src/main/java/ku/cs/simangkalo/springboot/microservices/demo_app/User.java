@@ -29,7 +29,7 @@ public class User implements Serializable {
 
     @Override
     public String toString() {
-        return String.format("User#%d[%s]", this.id, this.name);
+        return String.format("User#%d[Name: %s]", this.id, this.name);
     }
 
 }
